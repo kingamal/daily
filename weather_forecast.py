@@ -4,6 +4,7 @@ from random import randint, choice
 app = FastAPI()
 
 weather_conditions = ["Sunny", "Cloudy", "Rainy", "Stormy", "Snowy"]
+forecasts_data = {}
 
 def generate_forecast():
     forecast = []
@@ -17,8 +18,10 @@ def generate_forecast():
 
 @app.get("/forecast/{city_name}")
 async def get_weather_forecast(city_name: str):
-    """Get a 3-day weather forecast for a specific city."""
-    ...
+    if city_name not in forecasts_data:
+        forecasts_data[city_name] = generate_forecast()
+
+    forecast_data = forecasts_data[city_name]
 
     return {"city": city_name, "forecasts": forecast_data}
 
