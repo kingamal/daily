@@ -27,7 +27,13 @@ async def get_weather_forecast(city_name: str):
 
 @app.get("/forecast/{city_name}/{day}")
 async def get_specific_day_forecast(city_name: str, day: int):
-    """Get the forecast for a specific day in the 3-day range."""
-    ...
+    if day < 1 or day > 3:
+        raise HTTPException(status_code=400, detail="Day must be within 1 to 3")
+
+    if city_name not in forecasts_data:
+        forecasts_data[city_name] = generate_forecast()
+
+    forecast_data = forecasts_data[city_name]
+    forecast = forecast_data[day - 1]
 
     return {"city": city_name, "forecast": forecast}
