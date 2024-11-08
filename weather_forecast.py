@@ -3,8 +3,17 @@ from random import randint, choice
 
 app = FastAPI()
 
-# Sample weather conditions for simulation
 weather_conditions = ["Sunny", "Cloudy", "Rainy", "Stormy", "Snowy"]
+
+def generate_forecast():
+    forecast = []
+    for day in range(1, 4):
+        forecast.append({
+            "day": f"Day {day}",
+            "temperature_c": randint(-10, 35),
+            "condition": choice(weather_conditions)
+        })
+    return forecast
 
 @app.get("/forecast/{city_name}")
 async def get_weather_forecast(city_name: str):
