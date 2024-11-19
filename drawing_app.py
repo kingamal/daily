@@ -1,6 +1,7 @@
 from tkinter import *
 
 window=Tk()
+window.title("Basic Drawing App")
 
 def pick_color():
     print('color')
