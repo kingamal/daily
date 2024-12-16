@@ -1,0 +1,5 @@
+Timestamp,URL,Response Time (ms),Status Code,Status
+2024-12-16 13:48:54,https://www.google.com,280.95,200,Online
+2024-12-16 13:48:55,https://www.github.com,98.45,200,Online
+2024-12-16 13:48:55,https://www.nonexistentwebsiter12345.com,N/A,N/A,Offline
+2024-12-16 13:48:55,https://www.wikipedia.org,115.62,200,Online
