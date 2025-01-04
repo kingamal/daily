@@ -37,8 +37,13 @@ class BookLendingSystem:
                 return
 
             name = input("Enter your name: ").strip()
-            self.borrowed_books[book_number] = name
-            print(f"\nYou have borrowed '{self.available_books[book_number]}'. Please return it on time.")
+            book_title = self.available_books[book_number]
+
+            self.borrowed_books[book_number] = {
+                "title": book_title,
+                "borrower": name
+            }
+            print(f"\nYou have borrowed '{self.borrowed_books[book_number]}'. Please return it on time.")
             del self.available_books[book_number]
 
         except ValueError:
@@ -46,11 +51,34 @@ class BookLendingSystem:
 
     def return_book(self):
         if not self.borrowed_books:
-            pass
+            print("\nNo books are currently borrowed.")
+            return
+
+        print("\n--- Borrowed Books ---")
+        for book_number, details  in self.borrowed_books.items():
+            print(f"{book_number}. {details['title']} - Borrowed by {details['borrower']}")
+
+        try:
+            book_number = int(input("\nEnter the book number to return: ").strip())
+            if book_number not in self.borrowed_books:
+                print("Invalid book number. Please try again.")
+                return
+
+            self.available_books[book_number] = self.borrowed_books[book_number]['title']
+            print(f"\nThank you, {self.borrowed_books[book_number]['borrower']}, for returning '{self.borrowed_books[book_number]['title']}'1.")
+            del self.borrowed_books[book_number]
+
+        except ValueError:
+            print("Invalid input. Please enter a valid book number.")
 
     def view_borrowed_books(self):
         if not self.borrowed_books:
-            pass
+            print("\nNo books are currently borrowed.")
+            return
+
+        print("\n--- Borrowed Books ---")
+        for book_number, details  in self.borrowed_books.items():
+            print(f"{book_number}. {details['title']} - Borrowed by {details['borrower']}")
 
     def run(self):
         while True:
