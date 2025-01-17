@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ba721667b94295636feb9d90336d9a4e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ba721667b94295636feb9d90336d9a4e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ba721667b94295636feb9d90336d9a4e = L.map(
+                "map_ba721667b94295636feb9d90336d9a4e",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d0076dc9b8498232041b75e9c02a5c26 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d0076dc9b8498232041b75e9c02a5c26.addTo(map_ba721667b94295636feb9d90336d9a4e);
+        
+    
+            var marker_487bd7b36e6e55e391631ec65f63ec32 = L.marker(
+                [31.8062, 131.5651],
+                {
+}
+            ).addTo(map_ba721667b94295636feb9d90336d9a4e);
+        
+    
+            var icon_2b7a8700dbf1afe9b3b60fad7615d84f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_487bd7b36e6e55e391631ec65f63ec32.setIcon(icon_2b7a8700dbf1afe9b3b60fad7615d84f);
+        
+    
+        var popup_5c4f5a013a1999b262f8d77544bac1d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b2b31884cd32f8b5b49fd124f8e60788 = $(`<div id="html_b2b31884cd32f8b5b49fd124f8e60788" style="width: 100.0%; height: 100.0%;">Magnitude: 6.8<br>Location: 18 km SE of Miyazaki, Japan<br><a href=https://earthquake.usgs.gov/earthquakes/eventpage/us6000pjny target='_blank'>More Info</a></div>`)[0];
+                popup_5c4f5a013a1999b262f8d77544bac1d7.setContent(html_b2b31884cd32f8b5b49fd124f8e60788);
+            
+        
+
+        marker_487bd7b36e6e55e391631ec65f63ec32.bindPopup(popup_5c4f5a013a1999b262f8d77544bac1d7)
+        ;
+
+        
+    
+    
+            var marker_f29d0a57d9ac11531adfa02d31d0a3e9 = L.marker(
+                [18.5249, -103.3158],
+                {
+}
+            ).addTo(map_ba721667b94295636feb9d90336d9a4e);
+        
+    
+            var icon_904199615c8f04fbe669e045ecc6150a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_f29d0a57d9ac11531adfa02d31d0a3e9.setIcon(icon_904199615c8f04fbe669e045ecc6150a);
+        
+    
+        var popup_f9fcb6318ab905f14a5524d2d0b8920d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_280bedbbfcbab53c7f38d34bf6ecfc1a = $(`<div id="html_280bedbbfcbab53c7f38d34bf6ecfc1a" style="width: 100.0%; height: 100.0%;">Magnitude: 6.2<br>Location: 21 km ESE of Aquila, Mexico<br><a href=https://earthquake.usgs.gov/earthquakes/eventpage/us6000pjig target='_blank'>More Info</a></div>`)[0];
+                popup_f9fcb6318ab905f14a5524d2d0b8920d.setContent(html_280bedbbfcbab53c7f38d34bf6ecfc1a);
+            
+        
+
+        marker_f29d0a57d9ac11531adfa02d31d0a3e9.bindPopup(popup_f9fcb6318ab905f14a5524d2d0b8920d)
+        ;
+
+        
+    
+    
+            var marker_0d6463d80553c2afa47cd6a8897448bc = L.marker(
+                [-10.9571, 165.9879],
+                {
+}
+            ).addTo(map_ba721667b94295636feb9d90336d9a4e);
+        
+    
+            var icon_9f8c4113e6b2eca5fac3f26ec6a5b893 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_0d6463d80553c2afa47cd6a8897448bc.setIcon(icon_9f8c4113e6b2eca5fac3f26ec6a5b893);
+        
+    
+        var popup_dd18050eec3f96ad0b9bdebeb66864ad = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fc0ec691f7b8c59269eb74325721866c = $(`<div id="html_fc0ec691f7b8c59269eb74325721866c" style="width: 100.0%; height: 100.0%;">Magnitude: 5.7<br>Location: 33 km SE of Lata, Solomon Islands<br><a href=https://earthquake.usgs.gov/earthquakes/eventpage/us6000pk9u target='_blank'>More Info</a></div>`)[0];
+                popup_dd18050eec3f96ad0b9bdebeb66864ad.setContent(html_fc0ec691f7b8c59269eb74325721866c);
+            
+        
+
+        marker_0d6463d80553c2afa47cd6a8897448bc.bindPopup(popup_dd18050eec3f96ad0b9bdebeb66864ad)
+        ;
+
+        
+    
+    
+            var marker_fd4d003c1374271291ff2c807d3a7533 = L.marker(
+                [7.3058, -35.4804],
+                {
+}
+            ).addTo(map_ba721667b94295636feb9d90336d9a4e);
+        
+    
+            var icon_99a8b51241dee90344eb2d6496148acd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_fd4d003c1374271291ff2c807d3a7533.setIcon(icon_99a8b51241dee90344eb2d6496148acd);
+        
+    
+        var popup_72db055dbd97e6cbb9460e662585b27f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4078071a66e154454c2290ede945a3ec = $(`<div id="html_4078071a66e154454c2290ede945a3ec" style="width: 100.0%; height: 100.0%;">Magnitude: 5.7<br>Location: central Mid-Atlantic Ridge<br><a href=https://earthquake.usgs.gov/earthquakes/eventpage/us6000pjym target='_blank'>More Info</a></div>`)[0];
+                popup_72db055dbd97e6cbb9460e662585b27f.setContent(html_4078071a66e154454c2290ede945a3ec);
+            
+        
+
+        marker_fd4d003c1374271291ff2c807d3a7533.bindPopup(popup_72db055dbd97e6cbb9460e662585b27f)
+        ;
+
+        
+    
+    
+            var marker_207c2006955af3ed0a3db4f521f50a63 = L.marker(
+                [31.6833, 131.8022],
+                {
+}
+            ).addTo(map_ba721667b94295636feb9d90336d9a4e);
+        
+    
+            var icon_cc4b691d283d0318f1d2cc76955dd6fd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_207c2006955af3ed0a3db4f521f50a63.setIcon(icon_cc4b691d283d0318f1d2cc76955dd6fd);
+        
+    
+        var popup_c3351aac170884abcf71c394729818f2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0538282b2ae863424e42ef51fe446e69 = $(`<div id="html_0538282b2ae863424e42ef51fe446e69" style="width: 100.0%; height: 100.0%;">Magnitude: 5.5<br>Location: 42 km ENE of Nichinan, Japan<br><a href=https://earthquake.usgs.gov/earthquakes/eventpage/us6000pjxl target='_blank'>More Info</a></div>`)[0];
+                popup_c3351aac170884abcf71c394729818f2.setContent(html_0538282b2ae863424e42ef51fe446e69);
+            
+        
+
+        marker_207c2006955af3ed0a3db4f521f50a63.bindPopup(popup_c3351aac170884abcf71c394729818f2)
+        ;
+
+        
+    
+    
+            var marker_4e1ece5b3b119d55ebd7a0c6bde40275 = L.marker(
+                [6.6152, 123.7945],
+                {
+}
+            ).addTo(map_ba721667b94295636feb9d90336d9a4e);
+        
+    
+            var icon_801831fd7f15c0be2bb3fffeb26234bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_4e1ece5b3b119d55ebd7a0c6bde40275.setIcon(icon_801831fd7f15c0be2bb3fffeb26234bb);
+        
+    
+        var popup_fc9cb904392f84bb0de11fd9b0959735 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7690e6b6d31cff8a7718bee2ee183e13 = $(`<div id="html_7690e6b6d31cff8a7718bee2ee183e13" style="width: 100.0%; height: 100.0%;">Magnitude: 5.4<br>Location: 27 km WNW of Bantogon, Philippines<br><a href=https://earthquake.usgs.gov/earthquakes/eventpage/us6000pjlq target='_blank'>More Info</a></div>`)[0];
+                popup_fc9cb904392f84bb0de11fd9b0959735.setContent(html_7690e6b6d31cff8a7718bee2ee183e13);
+            
+        
+
+        marker_4e1ece5b3b119d55ebd7a0c6bde40275.bindPopup(popup_fc9cb904392f84bb0de11fd9b0959735)
+        ;
+
+        
+    
+    
+            var marker_1bafe73eab7ae0199b2f7b946ee3a8a3 = L.marker(
+                [-17.8257, -178.4616],
+                {
+}
+            ).addTo(map_ba721667b94295636feb9d90336d9a4e);
+        
+    
+            var icon_8119e292f80265128d981f56a1c3e8fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_1bafe73eab7ae0199b2f7b946ee3a8a3.setIcon(icon_8119e292f80265128d981f56a1c3e8fa);
+        
+    
+        var popup_f6a1c0666d01c7ef22c5d0f84a1b7a82 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_80ec219cd612f4108d947eebd64b913a = $(`<div id="html_80ec219cd612f4108d947eebd64b913a" style="width: 100.0%; height: 100.0%;">Magnitude: 5.4<br>Location: 236 km E of Levuka, Fiji<br><a href=https://earthquake.usgs.gov/earthquakes/eventpage/us6000pjk4 target='_blank'>More Info</a></div>`)[0];
+                popup_f6a1c0666d01c7ef22c5d0f84a1b7a82.setContent(html_80ec219cd612f4108d947eebd64b913a);
+            
+        
+
+        marker_1bafe73eab7ae0199b2f7b946ee3a8a3.bindPopup(popup_f6a1c0666d01c7ef22c5d0f84a1b7a82)
+        ;
+
+        
+    
+    
+            var marker_a6bf59848470917e85a8c73d90e2efde = L.marker(
+                [-30.4172, -178.142],
+                {
+}
+            ).addTo(map_ba721667b94295636feb9d90336d9a4e);
+        
+    
+            var icon_b0a353234a1f1e767c04bebb08cf236a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_a6bf59848470917e85a8c73d90e2efde.setIcon(icon_b0a353234a1f1e767c04bebb08cf236a);
+        
+    
+        var popup_39188220edad7a4b7fe586fcc2696c88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e577195617fe85ce11034b6c3649da1 = $(`<div id="html_3e577195617fe85ce11034b6c3649da1" style="width: 100.0%; height: 100.0%;">Magnitude: 5.2<br>Location: Kermadec Islands, New Zealand<br><a href=https://earthquake.usgs.gov/earthquakes/eventpage/us6000pk2k target='_blank'>More Info</a></div>`)[0];
+                popup_39188220edad7a4b7fe586fcc2696c88.setContent(html_3e577195617fe85ce11034b6c3649da1);
+            
+        
+
+        marker_a6bf59848470917e85a8c73d90e2efde.bindPopup(popup_39188220edad7a4b7fe586fcc2696c88)
+        ;
+
+        
+    
+    
+            var marker_da4a2091806386b82bf0ebe589e8b52d = L.marker(
+                [-4.4955, -105.0641],
+                {
+}
+            ).addTo(map_ba721667b94295636feb9d90336d9a4e);
+        
+    
+            var icon_54aeb09512cf732ca1eb3d78ca64176a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_da4a2091806386b82bf0ebe589e8b52d.setIcon(icon_54aeb09512cf732ca1eb3d78ca64176a);
+        
+    
+        var popup_8c641393840d6654319551d991604a7c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fdfb81eb1db41bfbdc7860f08c996ba6 = $(`<div id="html_fdfb81eb1db41bfbdc7860f08c996ba6" style="width: 100.0%; height: 100.0%;">Magnitude: 5.2<br>Location: central East Pacific Rise<br><a href=https://earthquake.usgs.gov/earthquakes/eventpage/us6000pjx0 target='_blank'>More Info</a></div>`)[0];
+                popup_8c641393840d6654319551d991604a7c.setContent(html_fdfb81eb1db41bfbdc7860f08c996ba6);
+            
+        
+
+        marker_da4a2091806386b82bf0ebe589e8b52d.bindPopup(popup_8c641393840d6654319551d991604a7c)
+        ;
+
+        
+    
+    
+            var marker_f1ebf3bc5175dce2fa32f63d43c5f59f = L.marker(
+                [64.7192, -17.4149],
+                {
+}
+            ).addTo(map_ba721667b94295636feb9d90336d9a4e);
+        
+    
+            var icon_5ef2a34aa2d2e7bb357529e0fc71732a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_f1ebf3bc5175dce2fa32f63d43c5f59f.setIcon(icon_5ef2a34aa2d2e7bb357529e0fc71732a);
+        
+    
+        var popup_0d0249e4fd04594c661d6ba689b6083c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f5e0a3256b7b7caa9f13d417f446781 = $(`<div id="html_4f5e0a3256b7b7caa9f13d417f446781" style="width: 100.0%; height: 100.0%;">Magnitude: 5.2<br>Location: 111 km S of Laugar, Iceland<br><a href=https://earthquake.usgs.gov/earthquakes/eventpage/us6000pjw8 target='_blank'>More Info</a></div>`)[0];
+                popup_0d0249e4fd04594c661d6ba689b6083c.setContent(html_4f5e0a3256b7b7caa9f13d417f446781);
+            
+        
+
+        marker_f1ebf3bc5175dce2fa32f63d43c5f59f.bindPopup(popup_0d0249e4fd04594c661d6ba689b6083c)
+        ;
+
+        
+    
+</script>
+</html>
